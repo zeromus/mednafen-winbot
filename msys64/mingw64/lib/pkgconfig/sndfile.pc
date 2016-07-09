@@ -1,0 +1,12 @@
+prefix=/mingw64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: sndfile
+Description: A library for reading and writing audio files
+Requires: 
+Version: 1.0.26
+Libs: -L${libdir} -lsndfile
+Libs.private: -L/mingw64/lib -lFLAC -L/mingw64/lib -logg -L/mingw64/lib -lvorbis -L/mingw64/lib -lvorbisenc -L/mingw64/lib -lspeex 
+Cflags: -I${includedir} 

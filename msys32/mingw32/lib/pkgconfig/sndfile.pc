@@ -1,0 +1,12 @@
+prefix=/mingw32
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: sndfile
+Description: A library for reading and writing audio files
+Requires: 
+Version: 1.0.26
+Libs: -L${libdir} -lsndfile
+Libs.private: -L/mingw32/lib -lFLAC -L/mingw32/lib -logg -L/mingw32/lib -lvorbis -L/mingw32/lib -lvorbisenc -L/mingw32/lib -lspeex 
+Cflags: -I${includedir} 

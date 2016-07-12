@@ -1,7 +1,7 @@
 pushd %~dp0
 
 set OUTDIR=.out64
-set WORKDIR=.work
+set WORKDIR=.work64
 
 set PATH=%PATH%;C:\Program Files (x86)\git\bin;C:\Program Files\git\bin
 
@@ -28,10 +28,10 @@ rem configure and make
 call ..\run-msys64.bat -mingw64 -here %CD% -c "CFLAGS=""-O2 -fomit-frame-pointer -mtune=amdfam10"" CXXFLAGS=""$CFLAGS"" CPPFLAGS=""-D_LFS64_LARGEFILE=1"" LDFLAGS=""-static"" ./configure --host=x86_64-w64-mingw32 --enable-snes-faust && make -j%NUMBER_OF_PROCESSORS%"
 
 rem copy to output and strip
-call ..\run-msys64.bat -mingw64 -here %CD% -c "cp src/mednafen.exe ../.out && strip -s ../.out/mednafen.exe"
+call ..\run-msys64.bat -mingw64 -here %CD% -c "cp src/mednafen.exe ../%OUTDIR% && strip -s ../%OUTDIR%/mednafen.exe"
 
 rem consolidate dependencies
-call ..\run-msys64.bat -mingw64 -here %CD% -c "for f in `ldd ../.out/mednafen.exe | grep '/mingw' | awk '{print $3}'`; do cp $f ../.out/; done"
+call ..\run-msys64.bat -mingw64 -here %CD% -c "for f in `ldd ../%OUTDIR%/mednafen.exe | grep '/mingw' | awk '{print $3}'`; do cp $f ../%OUTDIR%/; done"
 
 rem final cleanup
 timeout 1

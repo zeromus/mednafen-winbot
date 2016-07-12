@@ -1,0 +1,43 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+# BEGIN section for OpenVPN Client SSL sites
+127.94.0.1	client.openvpn.net
+127.94.0.2	openvpn-client.static.tunnelservers.net
+# END section for OpenVPN Client SSL sites
+
+
+127.0.0.1 ood.opsource.net ereg.wip4.adobe.com ereg.wip.adobe.com activate-sjc0.adobe.com practivate.adobe.ipp activate.wip4.adobe.com 3dns-1.adobe.com activate.wip1.adobe.com 3dns.adobe.com
+127.0.0.1 practivate.adobe.ntp activate.wip.adobe.com wip1.adobe.com 3dns-4.adobe.com activate.wip2.adobe.com practivate.adobe 3dns-2.adobe.com www.wip4.adobe.com 3dns-3.adobe.com
+127.0.0.1 crl.verisign.net adobe-dns-4.adobe.com adobe-dns-1.adobe.com adobe-dns.adobe.com ereg.adobe.com wip4.adobe.com lm.licenses.adobe.com wip3.adobe.com na2m-pr.licenses.adobe.com
+127.0.0.1 www.wip1.adobe.com adobeereg.com lmlicenses.wip4.adobe.com www.wip2.adobe.com ereg.wip2.adobe.com www.wip.adobe.com wip2.adobe.com practivate.adobe.newoa wwis-dubc1-vip60.adobe.com
+127.0.0.1 wip.adobe.com adobe-dns-3.adobe.com www.adobeereg.com practivate.adobe.com activate-sea.adobe.com activate.wip3.adobe.com activate.adobe.com adobe-dns-2.adobe.com www.wip3.adobe.com
+127.0.0.1 hl2rcv.adobe.com ereg.wip3.adobe.com ereg.wip1.adobe.com
+127.0.0.1 3dns.adobe.com 3dns-1.adobe.com 3dns-2.adobe.com 3dns-3.adobe.com 3dns-4.adobe.com activate.adobe.com activate-sea.adobe.com activate-sjc0.adobe.com activate.wip.adobe.com
+127.0.0.1 activate.wip1.adobe.com activate.wip2.adobe.com activate.wip3.adobe.com activate.wip4.adobe.com adobe-dns.adobe.com adobe-dns-1.adobe.com adobe-dns-2.adobe.com adobe-dns-3.adobe.com adobe-dns-4.adobe.com
+127.0.0.1 adobeereg.com practivate.adobe practivate.adobe.com practivate.adobe.newoa practivate.adobe.ntp practivate.adobe.ipp ereg.adobe.com ereg.wip.adobe.com ereg.wip1.adobe.com
+127.0.0.1 ereg.wip2.adobe.com ereg.wip3.adobe.com ereg.wip4.adobe.com hl2rcv.adobe.com wip.adobe.com wip1.adobe.com wip2.adobe.com wip3.adobe.com wip4.adobe.com
+127.0.0.1 www.adobeereg.com wwis-dubc1-vip60.adobe.com www.wip.adobe.com www.wip1.adobe.com
+127.0.0.1 www.wip2.adobe.com www.wip3.adobe.com www.wip4.adobe.com wwis-dubc1-vip60.adobe.com crl.verisign.net CRL.VERISIGN.NET ood.opsource.net
+127.0.0.1 activate.adobe.com
+127.0.0.1 lm.licenses.adobe.com
+127.0.0.1 lmlicenses.wip4.adobe.com
+127.0.0.1 practivate.adobe.com

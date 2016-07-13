@@ -1,1 +1,1 @@
-call build.bat https://github.com/libretro/mednafen-git.git
+call build.bat https://github.com/libretro/mednafen-git.git master

@@ -18,11 +18,10 @@ mkdir %OUTDIR%
 
 rem http://stackoverflow.com/questions/13750182/git-how-to-archive-from-remote-repository-directly
 cd %WORKDIR%
-git clone --depth=1 --single-branch --branch master %1 .
+git clone --depth=1 --single-branch --branch %2 %1 .
 
 rem fix symlinks which dont always come
-rem TODO: delete existing symlink, in case it's there?
-call ..\run-msys64.bat -mingw64 -here %CD% -c "ln -s ${PWD}/src ${PWD}/include/mednafen"
+call ..\run-msys64.bat -mingw64 -here %CD% -c "rm ${PWD}/include/mednafen && ln -s ${PWD}/src ${PWD}/include/mednafen"
 
 rem configure and make
 call ..\run-msys64.bat -mingw64 -here %CD% -c "CFLAGS=""-O2 -fomit-frame-pointer -mtune=amdfam10"" CXXFLAGS=""$CFLAGS"" CPPFLAGS=""-D_LFS64_LARGEFILE=1"" LDFLAGS=""-static"" ./configure --host=x86_64-w64-mingw32 --enable-snes-faust && make -j%NUMBER_OF_PROCESSORS%"
